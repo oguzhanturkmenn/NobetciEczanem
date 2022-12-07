@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/pharmacyFragment">
+
+    <fragment
+        android:id="@+id/pharmacyFragment"
+        android:name="com.oguzhanturkmen.mypharmacyonduty.fragments.PharmacyFragment"
+        android:label="fragment_pharmacy"
+        tools:layout="@layout/fragment_pharmacy" >
+        <action
+            android:id="@+id/action_pharmacyFragment_to_pharmacyDetailsFragment"
+            app:destination="@id/pharmacyDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pharmacyDetailsFragment"
+        android:name="com.oguzhanturkmen.mypharmacyonduty.fragments.PharmacyDetailsFragment"
+        android:label="fragment_pharmacy_details"
+        tools:layout="@layout/fragment_pharmacy_details" >
+        <action
+            android:id="@+id/action_pharmacyDetailsFragment_to_pharmacyFragment"
+            app:destination="@id/pharmacyFragment" />
+        <argument
+            android:name="pharmacyId"
+            app:argType="com.oguzhanturkmen.mypharmacyonduty.models.PharmacyModel" />
+        <action
+            android:id="@+id/action_pharmacyDetailsFragment_to_mapsFragment"
+            app:destination="@id/mapsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mapsFragment"
+        android:name="com.oguzhanturkmen.mypharmacyonduty.fragments.MapsFragment"
+        android:label="fragment_maps"
+        tools:layout="@layout/fragment_maps" >
+        <action
+            android:id="@+id/action_mapsFragment_to_pharmacyDetailsFragment"
+            app:destination="@id/pharmacyDetailsFragment" />
+        <action
+            android:id="@+id/action_mapsFragment_to_pharmacyFragment"
+            app:destination="@id/pharmacyFragment" />
+    </fragment>
+</navigation>

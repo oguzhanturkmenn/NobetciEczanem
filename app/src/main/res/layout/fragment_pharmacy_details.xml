@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#323030"
+    android:orientation="vertical"
+    tools:context=".fragments.PharmacyDetailsFragment">
+
+
+    <TextView
+        android:id="@+id/eczDetailName"
+        android:layout_width="331dp"
+        android:layout_height="45dp"
+        android:layout_margin="10dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="55dp"
+        android:text="Eczane İsmi"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/eczAdresName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/eczAdresName"
+        android:layout_width="331dp"
+        android:layout_height="45dp"
+        android:layout_margin="10dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="94dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="208dp"
+        android:text="Eczane Adresi"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/eczTelNo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eczDetailName" />
+
+    <TextView
+        android:id="@+id/eczTelNo"
+        android:layout_width="331dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="297dp"
+        android:text="Eczane Telefon Numarası"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eczAdresName">
+
+    </TextView>
+
+    <ImageView
+        android:id="@+id/phoneImage"
+        android:layout_width="110dp"
+        android:layout_height="101dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="212dp"
+        android:layout_marginEnd="233dp"
+        android:layout_marginBottom="25dp"
+        android:src="@drawable/phoneimg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eczTelNo" />
+
+    <ImageView
+        android:id="@+id/goToMapsImage"
+        android:layout_width="110dp"
+        android:layout_height="101dp"
+        android:layout_marginStart="59dp"
+        android:layout_marginTop="212dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="26dp"
+        android:src="@drawable/gotomaps"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/phoneImage"
+        app:layout_constraintTop_toBottomOf="@+id/eczTelNo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
