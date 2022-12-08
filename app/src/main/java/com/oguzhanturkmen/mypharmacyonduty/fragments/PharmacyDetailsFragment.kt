@@ -70,9 +70,10 @@ class PharmacyDetailsFragment : Fragment() {
 
 
         phoneImage.setOnClickListener {
-            val uri = Uri.parse(pharmacyModel.Telefon)
-            val intent = Intent(Intent.ACTION_DIAL, uri)
+            val intent = Intent(Intent.ACTION_DIAL)
+            intent.data = Uri.parse("tel:${pharmacyModel.Telefon}")
             startActivity(intent)
+
 
 
         }

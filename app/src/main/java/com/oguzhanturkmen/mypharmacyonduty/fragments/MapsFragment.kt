@@ -66,7 +66,7 @@ class MapsFragment : Fragment() {
 
 
     private val callback = OnMapReadyCallback {googleMap ->
-        locationManager = requireContext().getSystemService(LOCATION_SERVICE) as LocationManager
+        locationManager = context?.getSystemService(Context.LOCATION_SERVICE) as LocationManager
 
         locationListener = object : LocationListener{
             override fun onLocationChanged(location: Location) {
