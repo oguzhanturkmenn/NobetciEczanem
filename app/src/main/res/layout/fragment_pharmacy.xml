@@ -4,70 +4,68 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#323030"
+    android:background="@color/home_back"
     tools:context=".fragments.PharmacyFragment">
 
+    <LinearLayout
+        android:id="@+id/infoView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/p5"
+        app:layout_constraintBottom_toTopOf="@id/rv_eczane"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/districtText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:ems="10"
+            android:fontFamily="monospace"
+            android:hint="@string/ilce_giriniz"
+            android:inputType="textPersonName"
+            android:padding="@dimen/p5"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="@dimen/text_small_normal" />
+
+        <EditText
+            android:id="@+id/provinceText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:ems="10"
+            android:fontFamily="monospace"
+            android:hint="@string/il_giriniz"
+            android:inputType="textPersonName"
+            android:padding="@dimen/p5"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="@dimen/text_small_normal" />
+    </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_eczane"
-        android:layout_width="411dp"
-        android:layout_height="478dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginBottom="50dp"
-        app:layout_constraintBottom_toTopOf="@+id/searchButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/districtText" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/mt25"
+        android:layout_marginBottom="@dimen/mt50"
+        app:layout_constraintTop_toBottomOf="@id/infoView" />
 
 
     <Button
         android:id="@+id/searchButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="@dimen/mt16"
         android:background="@drawable/rounded_edittext"
         android:fontFamily="sans-serif-black"
-        android:text="Eczane Ara"
-        app:backgroundTint="#971C1C"
+        android:text="@string/find_pharmacy"
+        app:backgroundTint="@color/button_bg_red_tint"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
-        android:id="@+id/districtText"
-        android:layout_width="147dp"
-        android:layout_height="38dp"
-        android:layout_marginStart="55dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="52dp"
-        android:background="#323030"
-        android:ems="10"
-        android:fontFamily="monospace"
-        android:hint="@string/ilce_giriniz"
-        android:inputType="textPersonName"
-        android:padding="5dp"
-        android:textColor="#FFFFFF"
-        android:textColorHint="#FFFFFF"
-        android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/provinceText"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/provinceText"
-        android:layout_width="147dp"
-        android:layout_height="38dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="50dp"
-        android:background="#323030"
-        android:ems="10"
-        android:fontFamily="monospace"
-        android:hint="@string/il_giriniz"
-        android:inputType="textPersonName"
-        android:padding="5dp"
-        android:textColor="#FFFFFF"
-        android:textColorHint="#FFFFFF"
-        android:textSize="15sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
