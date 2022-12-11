@@ -41,7 +41,7 @@ class PharmacyViewModel(application: Application) : AndroidViewModel(application
                 }
 
                 override fun onFailure(call: Call<PharmacyResponse>, t: Throwable) {
-                    Toast.makeText(context, "asd", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(context, t.message, Toast.LENGTH_SHORT).show()
                 }
 
 
