@@ -13,11 +13,8 @@
         android:id="@+id/eczDetailName"
         android:layout_width="331dp"
         android:layout_height="45dp"
-        android:layout_margin="10dp"
-        android:layout_marginStart="29dp"
-        android:layout_marginTop="200dp"
-        android:layout_marginEnd="70dp"
-        android:layout_marginBottom="55dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginBottom="42dp"
         android:text="Eczane İsmi"
         android:textColor="@color/white"
         android:textSize="25sp"
@@ -30,34 +27,25 @@
         android:id="@+id/eczAdresName"
         android:layout_width="331dp"
         android:layout_height="45dp"
-        android:layout_margin="10dp"
-        android:layout_marginStart="29dp"
-        android:layout_marginTop="94dp"
-        android:layout_marginEnd="70dp"
-        android:layout_marginBottom="208dp"
+        android:layout_marginBottom="42dp"
         android:text="Eczane Adresi"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/eczTelNo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/eczDetailName" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/eczTelNo"
         android:layout_width="331dp"
         android:layout_height="45dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginBottom="297dp"
+        android:layout_marginBottom="370dp"
         android:text="Eczane Telefon Numarası"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/eczAdresName">
+        app:layout_constraintStart_toStartOf="parent">
 
     </TextView>
 
@@ -65,13 +53,9 @@
         android:id="@+id/phoneImage"
         android:layout_width="110dp"
         android:layout_height="101dp"
-        android:layout_marginStart="68dp"
-        android:layout_marginTop="212dp"
-        android:layout_marginEnd="233dp"
-        android:layout_marginBottom="25dp"
+        android:layout_marginStart="65dp"
+        android:layout_marginTop="164dp"
         android:src="@drawable/phoneimg"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/eczTelNo" />
 
@@ -79,14 +63,40 @@
         android:id="@+id/goToMapsImage"
         android:layout_width="110dp"
         android:layout_height="101dp"
-        android:layout_marginStart="59dp"
-        android:layout_marginTop="212dp"
-        android:layout_marginEnd="64dp"
-        android:layout_marginBottom="26dp"
+        android:layout_marginTop="164dp"
+        android:layout_marginEnd="65dp"
         android:src="@drawable/gotomaps"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eczTelNo" />
+
+    <TextView
+        android:id="@+id/araText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginBottom="34dp"
+        android:fontFamily="@font/bevan"
+        android:text="Arayınız"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phoneImage"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/yolTarifiText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="34dp"
+        android:fontFamily="@font/bevan"
+        android:text="Yol Tarifi"
+        android:textColor="@color/white"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/phoneImage"
-        app:layout_constraintTop_toBottomOf="@+id/eczTelNo" />
+        app:layout_constraintTop_toBottomOf="@+id/goToMapsImage"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

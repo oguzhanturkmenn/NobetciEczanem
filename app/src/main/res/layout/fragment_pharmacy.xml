@@ -7,6 +7,7 @@
     android:background="@color/home_back"
     tools:context=".fragments.PharmacyFragment">
 
+
     <LinearLayout
         android:id="@+id/infoView"
         android:layout_width="match_parent"
@@ -16,30 +17,30 @@
         app:layout_constraintBottom_toTopOf="@id/rv_eczane"
         app:layout_constraintTop_toTopOf="parent">
 
-        <EditText
-            android:id="@+id/districtText"
+        <Spinner
+            android:id="@+id/spinner1"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:layout_weight="1"
-            android:background="@android:color/transparent"
+            android:background="@android:drawable/btn_dropdown"
             android:ems="10"
             android:fontFamily="monospace"
-            android:hint="@string/ilce_giriniz"
+            android:hint="@string/il_giriniz"
             android:inputType="textPersonName"
             android:padding="@dimen/p5"
             android:textColor="@color/white"
             android:textColorHint="@color/white"
             android:textSize="@dimen/text_small_normal" />
 
-        <EditText
-            android:id="@+id/provinceText"
+        <Spinner
+            android:id="@+id/spinner2"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:layout_weight="1"
-            android:background="@android:color/transparent"
+            android:background="@android:drawable/btn_dropdown"
             android:ems="10"
             android:fontFamily="monospace"
-            android:hint="@string/il_giriniz"
+            android:hint="@string/ilce_giriniz"
             android:inputType="textPersonName"
             android:padding="@dimen/p5"
             android:textColor="@color/white"
@@ -54,7 +55,6 @@
         android:layout_marginTop="@dimen/mt25"
         android:layout_marginBottom="@dimen/mt50"
         app:layout_constraintTop_toBottomOf="@id/infoView" />
-
 
     <Button
         android:id="@+id/searchButton"

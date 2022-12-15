@@ -11,6 +11,7 @@ import androidx.lifecycle.viewModelScope
 import com.oguzhanturkmen.mypharmacyonduty.models.PharmacyModel
 import com.oguzhanturkmen.mypharmacyonduty.models.PharmacyResponse
 import com.oguzhanturkmen.mypharmacyonduty.service.APIUtils
+import com.oguzhanturkmen.mypharmacyonduty.util.toast
 import retrofit2.Call
 import retrofit2.Response
 import kotlin.coroutines.coroutineContext
@@ -18,7 +19,6 @@ import kotlin.coroutines.coroutineContext
 class PharmacyViewModel(application: Application) : AndroidViewModel(application) {
     @SuppressLint("StaticFieldLeak")
     private val context = getApplication<Application>().applicationContext
-
     @SuppressLint("StaticFieldLeak")
     val pharmacyList = MutableLiveData<List<PharmacyModel>>()
 
@@ -35,13 +35,14 @@ class PharmacyViewModel(application: Application) : AndroidViewModel(application
                     val tempList = response.body()?.data
                     tempList?.let {
                         pharmacyList.value = it
+
                     }
 
 
                 }
 
                 override fun onFailure(call: Call<PharmacyResponse>, t: Throwable) {
-                    Toast.makeText(context, t.message, Toast.LENGTH_SHORT).show()
+
                 }
 
 

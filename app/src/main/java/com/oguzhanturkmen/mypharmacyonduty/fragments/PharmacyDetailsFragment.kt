@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.Navigation
@@ -60,8 +61,12 @@ class PharmacyDetailsFragment : Fragment() {
 
     fun goToMaps(){
         goToMapsImage.setOnClickListener {
-            val action = PharmacyDetailsFragmentDirections.actionPharmacyDetailsFragmentToMapsFragment()
-            Navigation.findNavController(it).navigate(action)
+            val lat = pharmacyModel.latitude
+            val long = pharmacyModel.longitude
+            val uri = Uri.parse("geo:$lat,$long?q=${pharmacyModel.EczaneAdi}")
+            val mapIntent = Intent(Intent.ACTION_VIEW, uri)
+            mapIntent.setPackage("com.google.android.apps.maps")
+            ContextCompat.startActivity(requireContext(), mapIntent, null)
         }
 
     }
