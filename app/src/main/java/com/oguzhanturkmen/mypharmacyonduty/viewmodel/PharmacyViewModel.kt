@@ -18,8 +18,6 @@ import kotlin.coroutines.coroutineContext
 
 class PharmacyViewModel(application: Application) : AndroidViewModel(application) {
     @SuppressLint("StaticFieldLeak")
-    private val context = getApplication<Application>().applicationContext
-    @SuppressLint("StaticFieldLeak")
     val pharmacyList = MutableLiveData<List<PharmacyModel>>()
 
 

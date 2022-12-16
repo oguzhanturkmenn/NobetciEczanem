@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:padding="@dimen/p5"
-        app:layout_constraintBottom_toTopOf="@id/rv_eczane"
+        app:layout_constraintBottom_toTopOf="@id/rvEczane"
         app:layout_constraintTop_toTopOf="parent">
 
         <Spinner
@@ -23,14 +23,8 @@
             android:layout_height="40dp"
             android:layout_weight="1"
             android:background="@android:drawable/btn_dropdown"
-            android:ems="10"
-            android:fontFamily="monospace"
-            android:hint="@string/il_giriniz"
-            android:inputType="textPersonName"
-            android:padding="@dimen/p5"
             android:textColor="@color/white"
-            android:textColorHint="@color/white"
-            android:textSize="@dimen/text_small_normal" />
+            android:textColorHint="@color/white" />
 
         <Spinner
             android:id="@+id/spinner2"
@@ -38,18 +32,12 @@
             android:layout_height="40dp"
             android:layout_weight="1"
             android:background="@android:drawable/btn_dropdown"
-            android:ems="10"
-            android:fontFamily="monospace"
-            android:hint="@string/ilce_giriniz"
-            android:inputType="textPersonName"
-            android:padding="@dimen/p5"
             android:textColor="@color/white"
-            android:textColorHint="@color/white"
-            android:textSize="@dimen/text_small_normal" />
+            android:textColorHint="@color/white" />
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_eczane"
+        android:id="@+id/rvEczane"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/mt25"

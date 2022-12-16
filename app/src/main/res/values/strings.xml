@@ -6,4 +6,9 @@
     <string name="il_giriniz">İl Giriniz:</string>
     <string name="nobetci_eczanem">Nöbetçi Eczanem</string>
     <string name="find_pharmacy">Eczane Ara</string>
+    <string name="yol_tarifi">Yol Tarifi</string>
+    <string name="arayiniz">Arayınız</string>
+    <string name="eczane_telefon_numarasi">Eczane Telefon Numarası</string>
+    <string name="eczane_adresi">Eczane Adresi</string>
+    <string name="eczane_detailismi">Eczane İsmi</string>
 </resources>

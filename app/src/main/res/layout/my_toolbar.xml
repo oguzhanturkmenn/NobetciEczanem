@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:id="@+id/toolbar"
-    android:background="#323030">
+    android:background="@color/background_color">
     <ImageView
         android:layout_width="50dp"
         android:layout_height="50dp"
@@ -16,7 +16,7 @@
         android:layout_height="match_parent"
         android:fontFamily="@font/alfa_slab_one"
         android:text="@string/nobetci_eczanem"
-        android:textSize="20sp"
-        android:textColor="#C5BCBC" />
+        android:textSize="@dimen/text_small"
+        android:textColor="@color/logo_text_color" />
 
 </androidx.appcompat.widget.Toolbar>

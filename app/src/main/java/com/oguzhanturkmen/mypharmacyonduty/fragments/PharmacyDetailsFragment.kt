@@ -18,25 +18,9 @@ import com.oguzhanturkmen.mypharmacyonduty.viewmodel.PharmacyViewModel
 import kotlinx.android.synthetic.main.fragment_pharmacy_details.*
 
 
-class PharmacyDetailsFragment : Fragment() {
-    private lateinit var _view: View
+class PharmacyDetailsFragment : Fragment(R.layout.fragment_pharmacy_details) {
     private val viewModel : PharmacyViewModel by activityViewModels()
     private lateinit var pharmacyModel: PharmacyModel
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        _view = inflater.inflate(R.layout.fragment_pharmacy_details, container, false)
-
-        return _view
-    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -72,14 +56,10 @@ class PharmacyDetailsFragment : Fragment() {
     }
 
     fun call() {
-
-
         phoneImage.setOnClickListener {
             val intent = Intent(Intent.ACTION_DIAL)
             intent.data = Uri.parse("tel:${pharmacyModel.Telefon}")
             startActivity(intent)
-
-
 
         }
     }

@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="text_small_normal">15sp</dimen>
+    <dimen name="text_small">20sp</dimen>
+    <dimen name="text_medium">25sp</dimen>
+    <dimen name="text_big">35sp</dimen>
     <dimen name="p5">5dp</dimen>
     <dimen name="mt16">16dp</dimen>
     <dimen name="mt25">25dp</dimen>
     <dimen name="mt50">50dp</dimen>
+    <dimen name="row_text">15sp</dimen>
 
 </resources>

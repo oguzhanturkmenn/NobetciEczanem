@@ -3,10 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/oguzh/AndroidStudioProjects/PharmacyOnDuty/app/src/main/res/drawable/ic_arrowto_right.xml" value="0.121" />
+        <entry key="..\:/Users/oguzh/AndroidStudioProjects/PharmacyOnDuty/app/src/main/res/drawable/ic_location.xml" value="0.234" />
         <entry key="..\:/Users/oguzh/AndroidStudioProjects/PharmacyOnDuty/app/src/main/res/drawable/rounded_edittext.xml" value="0.2555" />
         <entry key="..\:/Users/oguzh/AndroidStudioProjects/PharmacyOnDuty/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/oguzh/AndroidStudioProjects/PharmacyOnDuty/app/src/main/res/layout/fragment_pharmacy.xml" value="0.264" />
-        <entry key="..\:/Users/oguzh/AndroidStudioProjects/PharmacyOnDuty/app/src/main/res/layout/fragment_pharmacy_details.xml" value="0.264" />
+        <entry key="..\:/Users/oguzh/AndroidStudioProjects/PharmacyOnDuty/app/src/main/res/layout/fragment_pharmacy_details.xml" value="0.2" />
         <entry key="..\:/Users/oguzh/AndroidStudioProjects/PharmacyOnDuty/app/src/main/res/layout/my_toolbar.xml" value="0.4" />
         <entry key="..\:/Users/oguzh/AndroidStudioProjects/PharmacyOnDuty/app/src/main/res/layout/pharmacy_row.xml" value="0.4" />
       </map>
