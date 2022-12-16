@@ -7,18 +7,15 @@
     android:layout_height="wrap_content"
     app:cardBackgroundColor="@color/background_color"
     app:cardElevation="10dp"
-    android:layout_margin="7dp"
-
-
-    >
-
-
+    app:cardCornerRadius="15dp"
+    android:layout_margin="7dp">
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_arrowto_right"
         android:layout_gravity="right"/>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

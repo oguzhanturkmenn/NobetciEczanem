@@ -1,10 +1,10 @@
 package com.oguzhanturkmen.mypharmacyonduty.models
 
-import com.google.gson.annotations.SerializedName
 
 data class PharmacyResponse(
-    @SerializedName("data")
-    val data : List<PharmacyModel>,
-    @SerializedName("success")
-    val success : Boolean
+    val `data`: List<PharmacyModel>,
+    val message: String,
+    val rowCount: Int,
+    val status: String
 )
+

@@ -5,7 +5,7 @@ import android.view.View
 import android.widget.Toast
 import com.google.android.material.snackbar.Snackbar
 
-fun toast(v:Context,msg: String){
+fun showToast(v:Context,msg: String){
     Toast.makeText(v,msg, Toast.LENGTH_LONG).show()
 }
 

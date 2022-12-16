@@ -1,31 +1,21 @@
 package com.oguzhanturkmen.mypharmacyonduty.fragments
 
-import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
-import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.ak.nobetcieczane.util.CityModel
-import com.ak.nobetcieczane.util.getJsonDataFromAsset
+import com.oguzhanturkmen.mypharmacyonduty.util.getJsonDataFromAsset
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import com.oguzhanturkmen.mypharmacyonduty.R
 import com.oguzhanturkmen.mypharmacyonduty.adapter.PharmacyAdapter
-import com.oguzhanturkmen.mypharmacyonduty.models.PharmacyModel
-import com.oguzhanturkmen.mypharmacyonduty.util.showSnackbar
-import com.oguzhanturkmen.mypharmacyonduty.util.toast
+import com.oguzhanturkmen.mypharmacyonduty.util.CityModel
 import com.oguzhanturkmen.mypharmacyonduty.viewmodel.PharmacyViewModel
 import kotlinx.android.synthetic.main.fragment_pharmacy.*
-import kotlinx.android.synthetic.main.my_toolbar.*
 
 class PharmacyFragment : Fragment(R.layout.fragment_pharmacy),AdapterView.OnItemSelectedListener {
     private val viewModel : PharmacyViewModel by activityViewModels()

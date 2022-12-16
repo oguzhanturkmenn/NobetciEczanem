@@ -1,4 +1,4 @@
-package com.ak.nobetcieczane.util
+package com.oguzhanturkmen.mypharmacyonduty.util
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
