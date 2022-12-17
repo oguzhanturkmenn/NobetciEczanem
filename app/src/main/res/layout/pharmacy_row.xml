@@ -1,73 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    app:cardBackgroundColor="@color/background_color"
-    app:cardElevation="10dp"
-    app:cardCornerRadius="15dp"
-    android:layout_margin="7dp">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_arrowto_right"
-        android:layout_gravity="right"/>
+    <data>
+        <variable
+            name="model"
+            type="com.oguzhanturkmen.mypharmacyonduty.models.PharmacyModel" />
+    </data>
 
-    <LinearLayout
+    <androidx.cardview.widget.CardView
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        app:cardBackgroundColor="@color/background_color"
+        app:cardElevation="2dp"
+        app:cardCornerRadius="15dp"
+        android:layout_marginBottom="30dp">
 
         <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
-            android:padding="10dp"
-            android:src="@drawable/eczanelogo"
-            >
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrowto_right"
+            android:layout_gravity="end"/>
 
-        </ImageView>
         <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="80dp"
-            android:orientation="vertical"
-            android:layout_weight="1"
-            android:gravity="center_vertical">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/pharmacyNameText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:textSize="@dimen/row_text"
-                android:textStyle="bold"
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:contentDescription="@string/find_pharmacy"
+                android:padding="10dp"
+                android:src="@drawable/eczanelogo"
                 >
 
+            </ImageView>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:gravity="center_vertical">
 
-            </TextView>
-            <TextView
-                android:id="@+id/addressText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="@dimen/row_text"
-                android:textColor="@color/white"
-                >
+                <TextView
+                    android:id="@+id/pharmacyNameText"
+                    android:layout_width="wrap_content"
+                    android:text="@{model.eczaneAdi}"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/row_text"
+                    android:textStyle="bold">
 
-            </TextView>
 
-            <TextView
-                android:id="@+id/phoneText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="@dimen/row_text"
-                android:textColor="@color/white">
+                </TextView>
+                <TextView
+                    android:id="@+id/addressText"
+                    android:layout_width="wrap_content"
+                    android:layout_marginEnd="@dimen/mt20"
+                    android:layout_height="wrap_content"
+                    android:text="@{model.adresi}"
+                    android:textSize="@dimen/row_text"
+                    android:textColor="@color/white">
+                </TextView>
 
-            </TextView>
+                <TextView
+                    android:id="@+id/phoneText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{model.telefon}"
+                    android:textSize="@dimen/row_text"
+                    android:textColor="@color/white">
+
+                </TextView>
+
+            </LinearLayout>
 
         </LinearLayout>
-
-    </LinearLayout>
-</androidx.cardview.widget.CardView>
+    </androidx.cardview.widget.CardView>
+</layout>

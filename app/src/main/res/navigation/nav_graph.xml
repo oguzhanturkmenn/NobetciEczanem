@@ -12,7 +12,9 @@
         tools:layout="@layout/fragment_pharmacy" >
         <action
             android:id="@+id/action_pharmacyFragment_to_pharmacyDetailsFragment"
-            app:destination="@id/pharmacyDetailsFragment" />
+            app:destination="@id/pharmacyDetailsFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_in_right" />
     </fragment>
     <fragment
         android:id="@+id/pharmacyDetailsFragment"

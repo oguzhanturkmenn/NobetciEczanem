@@ -2,6 +2,7 @@ package com.oguzhanturkmen.mypharmacyonduty
 
 import android.annotation.SuppressLint
 import android.os.Bundle
+import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.my_toolbar.*
 
@@ -14,7 +15,10 @@ class MainActivity : AppCompatActivity() {
 
         myToolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
-        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+        if (supportActionBar != null) {
+            val actionBar: ActionBar? = supportActionBar
+            actionBar?.setDisplayHomeAsUpEnabled(false)
+        }
 
     }
 

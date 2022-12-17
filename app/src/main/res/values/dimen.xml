@@ -5,6 +5,7 @@
     <dimen name="text_big">35sp</dimen>
     <dimen name="p5">5dp</dimen>
     <dimen name="mt16">16dp</dimen>
+    <dimen name="mt20">20dp</dimen>
     <dimen name="mt25">25dp</dimen>
     <dimen name="mt50">50dp</dimen>
     <dimen name="row_text">15sp</dimen>

@@ -14,10 +14,10 @@ import retrofit2.Response
 class PharmacyViewModel(application: Application) : AndroidViewModel(application) {
     @SuppressLint("StaticFieldLeak")
     val pharmacyList = MutableLiveData<List<PharmacyModel>>()
-
+    val isLoading = MutableLiveData<Boolean>()
 
     fun getDatas(secilenilce: String, secilenil: String) {
-
+        isLoading.value = true
         APIUtils.pharmacyAPIGet().getPharmacy(secilenilce, secilenil).enqueue(
             object : retrofit2.Callback<PharmacyResponse> {
                 override fun onResponse(
@@ -28,14 +28,13 @@ class PharmacyViewModel(application: Application) : AndroidViewModel(application
                     val tempList = response.body()?.data
                     tempList?.let {
                         pharmacyList.value = it
-
+                        isLoading.value = false
                     }
-
-
                 }
 
                 override fun onFailure(call: Call<PharmacyResponse>, t: Throwable) {
-
+                    println(t.message)
+                    isLoading.value = false
                 }
 
 

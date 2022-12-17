@@ -1,37 +1,33 @@
 package com.oguzhanturkmen.mypharmacyonduty.adapter
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
-import com.oguzhanturkmen.mypharmacyonduty.R
+import com.oguzhanturkmen.mypharmacyonduty.databinding.PharmacyRowBinding
 import com.oguzhanturkmen.mypharmacyonduty.fragments.PharmacyFragmentDirections
 import com.oguzhanturkmen.mypharmacyonduty.models.PharmacyModel
-import kotlinx.android.synthetic.main.pharmacy_row.view.*
 
 class PharmacyAdapter(private val eczList : List<PharmacyModel>) : RecyclerView.Adapter<PharmacyAdapter.PharmacyHolder>() {
 
 
-    class PharmacyHolder(itemView:View) : RecyclerView.ViewHolder(itemView){
+    class PharmacyHolder(var v: PharmacyRowBinding) : RecyclerView.ViewHolder(v.root){
+        fun bind(p:PharmacyModel){
+            v.model = p
+            v.executePendingBindings()
+        }
 
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PharmacyHolder {
         val inflater = LayoutInflater.from(parent.context)
-        val view = inflater.inflate(R.layout.pharmacy_row,parent,false)
-        return PharmacyHolder(view)
+        val binding = PharmacyRowBinding.inflate(inflater)
+        return PharmacyHolder(binding)
     }
 
     override fun onBindViewHolder(holder: PharmacyHolder, position: Int) {
         val ecz = eczList[position]
-
-        holder.itemView.apply {
-            pharmacyNameText.text = ecz.EczaneAdi
-            addressText.text = ecz.Adresi
-            phoneText.text = ecz.Telefon
-        }
-
+        holder.bind(ecz)
         holder.itemView.setOnClickListener {
             val action = PharmacyFragmentDirections.actionPharmacyFragmentToPharmacyDetailsFragment(ecz)
             Navigation.findNavController(it).navigate(action)

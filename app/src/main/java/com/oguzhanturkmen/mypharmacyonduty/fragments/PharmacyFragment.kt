@@ -1,21 +1,27 @@
 package com.oguzhanturkmen.mypharmacyonduty.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
+import android.view.animation.AnimationUtils
+import android.view.animation.LayoutAnimationController
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.oguzhanturkmen.mypharmacyonduty.util.getJsonDataFromAsset
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import com.oguzhanturkmen.mypharmacyonduty.R
 import com.oguzhanturkmen.mypharmacyonduty.adapter.PharmacyAdapter
+import com.oguzhanturkmen.mypharmacyonduty.databinding.FragmentPharmacyBinding
 import com.oguzhanturkmen.mypharmacyonduty.util.CityModel
+import com.oguzhanturkmen.mypharmacyonduty.util.getJsonDataFromAsset
 import com.oguzhanturkmen.mypharmacyonduty.viewmodel.PharmacyViewModel
 import kotlinx.android.synthetic.main.fragment_pharmacy.*
+
 
 class PharmacyFragment : Fragment(R.layout.fragment_pharmacy),AdapterView.OnItemSelectedListener {
     private val viewModel : PharmacyViewModel by activityViewModels()
@@ -32,12 +38,20 @@ class PharmacyFragment : Fragment(R.layout.fragment_pharmacy),AdapterView.OnItem
     private var selectedCity:String? =null
     private var selectedDistrict:String? =null
 
+    private var _binding: FragmentPharmacyBinding? = null
+    private val binding get() = _binding!!
+
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        _binding = FragmentPharmacyBinding.inflate(inflater,container,false)
+        return binding.root
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-
-
         observeData()
         spinnerProcess(view)
         searchButton()
@@ -45,19 +59,24 @@ class PharmacyFragment : Fragment(R.layout.fragment_pharmacy),AdapterView.OnItem
         if (selectedCity!=null || selectedDistrict!=null){
             viewModel.getDatas(selectedDistrict!!,selectedCity!!)
         }
-
     }
 
     private fun observeData(){
         viewModel.pharmacyList.observe(viewLifecycleOwner, Observer {
                 it.let {
-
+                    val animationController: LayoutAnimationController =
+                        AnimationUtils.loadLayoutAnimation(requireContext(), R.anim.layout_animation)
+                    rvEczane.layoutAnimation = animationController
                     adapter = PharmacyAdapter(it)
                     rvEczane.adapter = adapter
                     rvEczane.layoutManager = LinearLayoutManager(context)
                     rvEczane.setHasFixedSize(true)
                 }
         })
+        viewModel.isLoading.observe(viewLifecycleOwner) {
+            binding.isLoadingProgress.visibility = if (it) View.VISIBLE else View.GONE
+            binding.searchButton.isEnabled = !it
+        }
     }
 
     private fun spinnerProcess(view: View) {
@@ -108,7 +127,7 @@ class PharmacyFragment : Fragment(R.layout.fragment_pharmacy),AdapterView.OnItem
     }
 
 
-    fun searchButton(){
+    private fun searchButton(){
         searchButton.setOnClickListener {
             val il = spinner1.selectedItem.toString()
             val ilce = spinner2.selectedItem.toString()
