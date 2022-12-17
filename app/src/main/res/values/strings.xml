@@ -11,4 +11,5 @@
     <string name="eczane_telefon_numarasi">Eczane Telefon Numarası</string>
     <string name="eczane_adresi">Eczane Adresi</string>
     <string name="eczane_detailismi">Eczane İsmi</string>
+    <string name="click_to_close">Please click BACK again to exit</string>
 </resources>

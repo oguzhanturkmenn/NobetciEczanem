@@ -10,7 +10,7 @@ import retrofit2.http.Query
 interface PharmacyAPI {
 
     @Headers(
-        "authorization: ${API_KEY}"
+        "authorization: $API_KEY"
     )
     @GET("pharmacy")
      fun getPharmacy(
