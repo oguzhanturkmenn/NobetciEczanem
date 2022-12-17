@@ -53,6 +53,7 @@ class PharmacyFragment : Fragment(R.layout.fragment_pharmacy),AdapterView.OnItem
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         observeData()
+        observeLoading()
         spinnerProcess(view)
         searchButton()
 
@@ -62,7 +63,7 @@ class PharmacyFragment : Fragment(R.layout.fragment_pharmacy),AdapterView.OnItem
     }
 
     private fun observeData(){
-        viewModel.pharmacyList.observe(viewLifecycleOwner, Observer {
+        viewModel.pharmacyList.observe(viewLifecycleOwner) {
                 it.let {
                     val animationController: LayoutAnimationController =
                         AnimationUtils.loadLayoutAnimation(requireContext(), R.anim.layout_animation)
@@ -72,10 +73,19 @@ class PharmacyFragment : Fragment(R.layout.fragment_pharmacy),AdapterView.OnItem
                     rvEczane.layoutManager = LinearLayoutManager(context)
                     rvEczane.setHasFixedSize(true)
                 }
-        })
-        viewModel.isLoading.observe(viewLifecycleOwner) {
-            binding.isLoadingProgress.visibility = if (it) View.VISIBLE else View.GONE
+        }
+
+    }
+
+    private fun observeLoading(){
+        viewModel.isLoading.observe(viewLifecycleOwner){
             binding.searchButton.isEnabled = !it
+            binding.isLoadingProgress.visibility = if (it) View.VISIBLE else View.GONE
+            if (it){
+                binding.rvEczane.visibility = View.GONE
+            }else{
+                binding.rvEczane.visibility = View.VISIBLE
+            }
         }
     }
 
@@ -132,7 +142,6 @@ class PharmacyFragment : Fragment(R.layout.fragment_pharmacy),AdapterView.OnItem
             val il = spinner1.selectedItem.toString()
             val ilce = spinner2.selectedItem.toString()
             viewModel.getDatas(ilce, il)
-
 
         }
 

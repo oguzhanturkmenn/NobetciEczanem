@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/pharmacyFragment">
+    app:startDestination="@id/splashFragment">
 
     <fragment
         android:id="@+id/pharmacyFragment"
@@ -27,20 +27,14 @@
         <argument
             android:name="pharmacyId"
             app:argType="com.oguzhanturkmen.mypharmacyonduty.models.PharmacyModel" />
-        <action
-            android:id="@+id/action_pharmacyDetailsFragment_to_mapsFragment"
-            app:destination="@id/mapsFragment" />
     </fragment>
     <fragment
-        android:id="@+id/mapsFragment"
-        android:name="com.oguzhanturkmen.mypharmacyonduty.fragments.MapsFragment"
-        android:label="fragment_maps"
-        tools:layout="@layout/fragment_maps" >
+        android:id="@+id/splashFragment"
+        android:name="com.oguzhanturkmen.mypharmacyonduty.fragments.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
         <action
-            android:id="@+id/action_mapsFragment_to_pharmacyDetailsFragment"
-            app:destination="@id/pharmacyDetailsFragment" />
-        <action
-            android:id="@+id/action_mapsFragment_to_pharmacyFragment"
+            android:id="@+id/action_splashFragment_to_pharmacyFragment"
             app:destination="@id/pharmacyFragment" />
     </fragment>
 </navigation>
