@@ -1,9 +1,7 @@
 package com.oguzhanturkmen.mypharmacyonduty.fragments
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import android.view.animation.AnimationUtils
 import android.view.animation.LayoutAnimationController
 import android.widget.AdapterView
@@ -11,6 +9,9 @@ import android.widget.ArrayAdapter
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
+import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.setupWithNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
@@ -19,6 +20,7 @@ import com.oguzhanturkmen.mypharmacyonduty.adapter.PharmacyAdapter
 import com.oguzhanturkmen.mypharmacyonduty.databinding.FragmentPharmacyBinding
 import com.oguzhanturkmen.mypharmacyonduty.util.CityModel
 import com.oguzhanturkmen.mypharmacyonduty.util.getJsonDataFromAsset
+import com.oguzhanturkmen.mypharmacyonduty.util.showToast
 import com.oguzhanturkmen.mypharmacyonduty.viewmodel.PharmacyViewModel
 import kotlinx.android.synthetic.main.fragment_pharmacy.*
 
@@ -52,10 +54,13 @@ class PharmacyFragment : Fragment(R.layout.fragment_pharmacy),AdapterView.OnItem
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        setHasOptionsMenu(true)
         observeData()
         observeLoading()
         spinnerProcess(view)
         searchButton()
+
 
         if (selectedCity!=null || selectedDistrict!=null){
             viewModel.getDatas(selectedDistrict!!,selectedCity!!)
@@ -87,6 +92,16 @@ class PharmacyFragment : Fragment(R.layout.fragment_pharmacy),AdapterView.OnItem
                 binding.rvEczane.visibility = View.VISIBLE
             }
         }
+    }
+
+    private fun searchButton(){
+        searchButton.setOnClickListener {
+            val il = spinner1.selectedItem.toString()
+            val ilce = spinner2.selectedItem.toString()
+            viewModel.getDatas(ilce, il)
+
+        }
+
     }
 
     private fun spinnerProcess(view: View) {
@@ -136,15 +151,21 @@ class PharmacyFragment : Fragment(R.layout.fragment_pharmacy),AdapterView.OnItem
     override fun onNothingSelected(p0: AdapterView<*>?) {
     }
 
-
-    private fun searchButton(){
-        searchButton.setOnClickListener {
-            val il = spinner1.selectedItem.toString()
-            val ilce = spinner2.selectedItem.toString()
-            viewModel.getDatas(ilce, il)
-
-        }
-
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.about_menu, menu)
+        super.onCreateOptionsMenu(menu, inflater)
     }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.about -> {
+                val action = PharmacyFragmentDirections.actionPharmacyFragmentToAboutAppFragment()
+                view?.let { Navigation.findNavController(it).navigate(action) }
+                return true
+            }
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
 
 }

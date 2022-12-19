@@ -15,6 +15,9 @@
             app:destination="@id/pharmacyDetailsFragment"
             app:enterAnim="@anim/slide_in_left"
             app:exitAnim="@anim/slide_in_right" />
+        <action
+            android:id="@+id/action_pharmacyFragment_to_aboutAppFragment"
+            app:destination="@id/aboutAppFragment" />
     </fragment>
     <fragment
         android:id="@+id/pharmacyDetailsFragment"
@@ -35,6 +38,15 @@
         tools:layout="@layout/fragment_splash" >
         <action
             android:id="@+id/action_splashFragment_to_pharmacyFragment"
+            app:destination="@id/pharmacyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutAppFragment"
+        android:name="com.oguzhanturkmen.mypharmacyonduty.fragments.AboutAppFragment"
+        android:label="fragment_about_app"
+        tools:layout="@layout/fragment_about_app" >
+        <action
+            android:id="@+id/action_aboutAppFragment_to_pharmacyFragment"
             app:destination="@id/pharmacyFragment" />
     </fragment>
 </navigation>

@@ -36,8 +36,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Made By Oğuzhan Türkmen"
-            android:textColor="@color/teal_700"
-            android:textSize="@dimen/text_small"
+            android:textColor="@color/logo_text_color"
+            android:textSize="17sp"
             app:fontFamily="@font/jockey_one" />
     </LinearLayout>
 

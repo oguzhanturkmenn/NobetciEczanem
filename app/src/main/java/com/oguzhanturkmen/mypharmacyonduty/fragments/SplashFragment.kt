@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
@@ -25,6 +26,7 @@ class SplashFragment : Fragment(R.layout.fragment_splash) {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentSplashBinding.inflate(inflater,container,false)
+
         return binding.root
     }
 
@@ -40,7 +42,7 @@ class SplashFragment : Fragment(R.layout.fragment_splash) {
             }
         }
         timer.start()
-        
+
 
     }
 }

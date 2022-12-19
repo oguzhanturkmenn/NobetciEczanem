@@ -43,6 +43,10 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 tools:layout_editor_absoluteY="256dp" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/white" />
 
             <TextView
                 android:id="@+id/eczAdresName"
@@ -60,6 +64,11 @@
                 app:layout_constraintStart_toStartOf="parent"
                 tools:layout_editor_absoluteY="317dp" />
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/white" />
+
             <TextView
                 android:id="@+id/eczTelNo"
                 android:layout_width="331dp"
@@ -75,6 +84,11 @@
                 app:drawableLeftCompat="@drawable/ic_phone"
                 tools:layout_editor_absoluteX="47dp"
                 tools:layout_editor_absoluteY="372dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/white" />
 
         </LinearLayout>
 

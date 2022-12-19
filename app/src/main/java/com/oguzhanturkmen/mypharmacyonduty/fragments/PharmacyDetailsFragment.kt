@@ -25,7 +25,7 @@ class PharmacyDetailsFragment : Fragment(R.layout.fragment_pharmacy_details) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         arguments?.let {
-            pharmacyModel = PharmacyDetailsFragmentArgs.fromBundle(it).pharmacyId
+            pharmacyModel = PharmacyDetailsFragmentArgs.fromBundle(it).pharmacyId!!
         }
         observeDetailsData()
         call()
