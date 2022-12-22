@@ -49,7 +49,7 @@ class PharmacyDetailsFragment : Fragment(R.layout.fragment_pharmacy_details) {
     }
 
     private fun goToMaps(){
-        goToMapsImage.setOnClickListener {
+        binding.goToMapsImage.setOnClickListener {
             val lat = pharmacyModel.latitude
             val long = pharmacyModel.longitude
             val uri = Uri.parse("geo:$lat,$long?q=${pharmacyModel.EczaneAdi}")
@@ -61,7 +61,7 @@ class PharmacyDetailsFragment : Fragment(R.layout.fragment_pharmacy_details) {
     }
 
     private fun call() {
-        phoneImage.setOnClickListener {
+        binding.callimage.setOnClickListener {
             val intent = Intent(Intent.ACTION_DIAL)
             intent.data = Uri.parse("tel:${pharmacyModel.Telefon}")
             startActivity(intent)

@@ -35,14 +35,15 @@
                 android:layout_width="331dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/jockey_one"
-                tools:text="@string/eczane_detailismi"
                 android:text="@{model.eczaneAdi}"
                 android:textColor="@color/red"
                 android:textSize="@dimen/text_big"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                tools:layout_editor_absoluteY="256dp" />
+                tools:layout_editor_absoluteY="256dp"
+                tools:text="@string/eczane_detailismi" />
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
@@ -55,14 +56,14 @@
                 android:layout_marginTop="35dp"
                 android:drawablePadding="10dp"
                 android:fontFamily="@font/jockey_one"
-                tools:text="@string/eczane_adresi"
                 android:text="@{model.adresi}"
                 android:textColor="@color/white"
                 android:textSize="@dimen/text_small"
                 app:drawableLeftCompat="@drawable/ic_location"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                tools:layout_editor_absoluteY="317dp" />
+                tools:layout_editor_absoluteY="317dp"
+                tools:text="@string/eczane_adresi" />
 
             <View
                 android:layout_width="match_parent"
@@ -77,13 +78,13 @@
                 android:layout_weight="10"
                 android:drawablePadding="10dp"
                 android:fontFamily="@font/jockey_one"
-                tools:text="@string/eczane_telefon_numarasi"
                 android:text="@{model.telefon}"
                 android:textColor="@color/white"
                 android:textSize="@dimen/text_small"
                 app:drawableLeftCompat="@drawable/ic_phone"
                 tools:layout_editor_absoluteX="47dp"
-                tools:layout_editor_absoluteY="372dp" />
+                tools:layout_editor_absoluteY="372dp"
+                tools:text="@string/eczane_telefon_numarasi" />
 
             <View
                 android:layout_width="match_parent"
@@ -92,59 +93,39 @@
 
         </LinearLayout>
 
-        <ImageView
-            android:id="@+id/phoneImage"
-            android:layout_width="110dp"
-            android:layout_height="101dp"
-            android:layout_marginStart="29dp"
-            android:layout_marginTop="460dp"
-            android:layout_marginBottom="4dp"
-            android:contentDescription="@string/arayiniz"
-            android:src="@drawable/phoneimg"
-            app:layout_constraintBottom_toTopOf="@+id/callText"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
-            android:id="@+id/goToMapsImage"
-            android:layout_width="110dp"
-            android:layout_height="101dp"
-            android:layout_marginTop="460dp"
-            android:layout_marginEnd="32dp"
-            android:layout_marginBottom="4dp"
-            android:src="@drawable/gotomaps"
-            app:layout_constraintBottom_toTopOf="@+id/directionText"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:contentDescription="@string/yol_tarifi" />
-
-        <TextView
-            android:id="@+id/callText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginBottom="57dp"
-            android:fontFamily="@font/bevan"
-            android:text="@string/arayiniz"
-            android:textColor="@color/white"
-            android:textSize="@dimen/text_small"
+        <LinearLayout
+            android:layout_width="137dp"
+            android:layout_height="134dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginBottom="64dp"
+            android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/phoneImage" />
+            app:layout_constraintStart_toStartOf="parent">
 
-        <TextView
-            android:id="@+id/directionText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="32dp"
-            android:layout_marginBottom="57dp"
-            android:fontFamily="@font/bevan"
-            android:text="@string/yol_tarifi"
-            android:textColor="@color/white"
-            android:textSize="@dimen/text_small"
+            <ImageView
+                android:id="@+id/callimage"
+                android:layout_width="110dp"
+                android:layout_height="115dp"
+                android:layout_marginStart="16dp"
+                app:srcCompat="@drawable/arapng" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="137dp"
+            android:layout_height="134dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="64dp"
+            android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/goToMapsImage" />
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <ImageView
+                android:id="@+id/goToMapsImage"
+                android:layout_width="120dp"
+                android:layout_height="115dp"
+                app:srcCompat="@drawable/gotomapspng" />
+        </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -60,7 +60,7 @@ class PharmacyFragment : Fragment(R.layout.fragment_pharmacy),AdapterView.OnItem
         observeLoading()
         spinnerProcess(view)
         searchButton()
-
+        
 
         if (selectedCity!=null || selectedDistrict!=null){
             viewModel.getDatas(selectedDistrict!!,selectedCity!!)

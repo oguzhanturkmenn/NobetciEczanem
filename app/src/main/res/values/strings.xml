@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MyPharmacyOnDuty</string>
+    <string name="app_name">Nöbetçi Eczanem</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="ilce_giriniz">İlçe Giriniz:</string>
@@ -12,4 +12,8 @@
     <string name="eczane_adresi">Eczane Adresi</string>
     <string name="eczane_detailismi">Eczane İsmi</string>
     <string name="click_to_close">Please click BACK again to exit</string>
+    <string name="about_app">Uygulama Hakkında</string>
+    <string name="email">oguzhn.1132@gmail.com</string>
+    <string name="api">API: https://www.nosyapi.com/api/nobetci-eczane</string>
+    <string name="app_açıklama">Nöbetçi eczanem uygulaması tamamen ücretsiz ve gönüllü olarak kullanıcılara hizmet vermektedir. Türkiyenin tüm şehirlerinde ve ilçelerindeki nöbetçi eczanelere erişebilir, yol tarifi isteyebilir ve kolaylıkla arama yapabilirsiniz. Uygulamadaki veriler her an güncel olarak sizlere yansıtılmaktadır. Uygulamamızı kullanıp bize destek olduğunuz için çok teşekkür ederiz.</string>
 </resources>

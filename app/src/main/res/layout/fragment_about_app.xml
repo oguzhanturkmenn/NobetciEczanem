@@ -1,63 +1,140 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFCDD2"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#FFCDD2"
-        android:orientation="vertical"
-        android:padding="16dp">
+        >
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="125dp"
+            app:cardCornerRadius="22dp"
+            app:cardElevation="4dp"
+            tools:layout_editor_absoluteY="168dp">
 
-        <TextView
-            android:id="@+id/aboutAppText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="16dp"
-            android:layout_marginTop="5dp"
-            android:text="Uygulama Hakkında"
-            android:textColor="#ce3232"
-            android:textSize="@dimen/text_big"
-            android:typeface="serif" />
 
-        <EditText
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:hint="Name"
-            android:inputType="textPersonName" />
+            <TextView
+                android:id="@+id/aboutAppText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Uygulama Hakkında"
+                android:textColor="@color/red"
+                android:textSize="@dimen/text_medium"
+                android:textStyle="bold"
+                app:fontFamily="@font/aldrich" />
 
-        <EditText
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:layout_marginTop="10dp"
-            android:hint="Email"
-            android:inputType="textEmailAddress" />
+        </androidx.cardview.widget.CardView>
 
-        <EditText
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:hint="Phone"
-            android:inputType="phone" />
-
-        <EditText
-            android:layout_width="fill_parent"
-            android:layout_height="150dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginTop="10dp"
-            android:gravity="top"
-            android:hint="Your Message"
-            android:fitsSystemWindows="true"
-            android:breakStrategy="balanced"
-            android:inputType="textMultiLine"
-            android:singleLine="false"
-            android:padding="5dp" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:elevation="4dp"
-            android:paddingLeft="70dp"
-            android:paddingRight="70dp"
-            android:text="Submit"
-            android:textColor="#fff" />
     </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView2"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="235dp"
+            app:cardCornerRadius="22dp"
+            app:cardElevation="4dp"
+            tools:layout_editor_absoluteY="275dp">
+
+            <TextView
+                android:id="@+id/emailText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+
+                android:drawablePadding="10dp"
+                android:paddingStart="15dp"
+                android:text="@string/email"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_small"
+                app:drawableLeftCompat="@drawable/ic_email" />
+
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView3"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="325dp"
+            app:cardCornerRadius="22dp"
+            app:cardElevation="4dp"
+            tools:layout_editor_absoluteY="358dp">
+
+            <TextView
+                android:id="@+id/apiText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:drawablePadding="10dp"
+                android:paddingStart="15dp"
+                android:text="@string/api"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_more_small"
+                app:drawableLeftCompat="@drawable/ic_link" />
+
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="405dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            tools:layout_editor_absoluteY="442dp">
+
+
+            <TextView
+                android:id="@+id/açıklama_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="5dp"
+                android:text="@string/app_açıklama"
+                android:textColor="@color/black"
+                android:textSize="17sp" />
+
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/aboutAppImg"
+        android:layout_width="303dp"
+        android:layout_height="203dp"
+        android:layout_marginTop="-90dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/pill" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

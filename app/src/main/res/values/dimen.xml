@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="row_text">10sp</dimen>
+    <dimen name="text_more_small">15sp</dimen>
     <dimen name="text_small">20sp</dimen>
     <dimen name="text_medium">25sp</dimen>
     <dimen name="text_big">35sp</dimen>
@@ -8,6 +10,5 @@
     <dimen name="mt20">20dp</dimen>
     <dimen name="mt25">25dp</dimen>
     <dimen name="mt50">50dp</dimen>
-    <dimen name="row_text">15sp</dimen>
 
 </resources>
