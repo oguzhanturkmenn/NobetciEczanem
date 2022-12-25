@@ -12,6 +12,7 @@
 - Retrofit 
 - Gson 
 - Lottie
+- Swipe Refresh Layout
 - Data Bingind
 - View Binding
 - Toastic
