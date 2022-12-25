@@ -85,7 +85,7 @@ class PharmacyFragment : Fragment(R.layout.fragment_pharmacy),AdapterView.OnItem
     private fun observeLoading(){
         viewModel.isLoading.observe(viewLifecycleOwner){
             binding.searchButton.isEnabled = !it
-            binding.isLoadingProgress.visibility = if (it) View.VISIBLE else View.GONE
+            binding.    isLoadingProgress.visibility = if (it) View.VISIBLE else View.GONE
             if (it){
                 binding.rvEczane.visibility = View.GONE
             }else{
