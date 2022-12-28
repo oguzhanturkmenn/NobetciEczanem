@@ -8,15 +8,13 @@ import com.oguzhanturkmen.mypharmacyonduty.databinding.PharmacyRowBinding
 import com.oguzhanturkmen.mypharmacyonduty.fragments.PharmacyFragmentDirections
 import com.oguzhanturkmen.mypharmacyonduty.models.PharmacyModel
 
-class PharmacyAdapter(private val eczList : List<PharmacyModel>) : RecyclerView.Adapter<PharmacyAdapter.PharmacyHolder>() {
+class PharmacyAdapter(private val eczList: List<PharmacyModel>) : RecyclerView.Adapter<PharmacyAdapter.PharmacyHolder>() {
 
-
-    class PharmacyHolder(var v: PharmacyRowBinding) : RecyclerView.ViewHolder(v.root){
-        fun bind(p:PharmacyModel){
+    class PharmacyHolder(var v: PharmacyRowBinding) : RecyclerView.ViewHolder(v.root) {
+        fun bind(p: PharmacyModel) {
             v.model = p
             v.executePendingBindings()
         }
-
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PharmacyHolder {

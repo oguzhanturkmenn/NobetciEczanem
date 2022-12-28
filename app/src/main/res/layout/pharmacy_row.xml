@@ -11,11 +11,11 @@
     <androidx.cardview.widget.CardView
 
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="75dp"
         app:cardBackgroundColor="@color/background_color"
         app:cardElevation="2dp"
         app:cardCornerRadius="15dp"
-        android:layout_marginBottom="30dp">
+        >
 
         <View
             android:layout_width="match_parent"
@@ -33,6 +33,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+
             android:orientation="horizontal">
 
             <ImageView
@@ -48,7 +49,7 @@
             </ImageView>
             <LinearLayout
                 android:layout_width="0dp"
-                android:layout_height="100dp"
+                android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:layout_weight="1"
                 android:gravity="center_vertical">
@@ -59,7 +60,7 @@
                     android:text="@{model.eczaneAdi}"
                     android:layout_height="wrap_content"
                     android:textColor="@color/logo_text_color"
-                    android:textSize="@dimen/text_more_small"
+                    android:textSize="@dimen/_14ssp"
                     android:textStyle="bold">
 
 
@@ -70,7 +71,7 @@
                     android:layout_marginEnd="@dimen/mt20"
                     android:layout_height="wrap_content"
                     android:text="@{model.adresi}"
-                    android:textSize="@dimen/row_text"
+                    android:textSize="@dimen/_10ssp"
                     android:textColor="@color/white">
                 </TextView>
 
@@ -79,7 +80,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@{model.telefon}"
-                    android:textSize="@dimen/row_text"
+                    android:textSize="@dimen/_10ssp"
                     android:textColor="@color/white">
 
                 </TextView>

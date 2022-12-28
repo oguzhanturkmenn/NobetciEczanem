@@ -15,11 +15,10 @@ import com.oguzhanturkmen.mypharmacyonduty.models.PharmacyModel
 import com.oguzhanturkmen.mypharmacyonduty.viewmodel.PharmacyViewModel
 import kotlinx.android.synthetic.main.fragment_pharmacy_details.*
 
-
 class PharmacyDetailsFragment : Fragment(R.layout.fragment_pharmacy_details) {
-    private val viewModel : PharmacyViewModel by activityViewModels()
+    private val viewModel: PharmacyViewModel by activityViewModels()
     private lateinit var pharmacyModel: PharmacyModel
-    private var _binding:FragmentPharmacyDetailsBinding? = null
+    private var _binding: FragmentPharmacyDetailsBinding? = null
     private val binding get() = _binding!!
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -32,10 +31,11 @@ class PharmacyDetailsFragment : Fragment(R.layout.fragment_pharmacy_details) {
         goToMaps()
     }
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentPharmacyDetailsBinding.inflate(inflater,container,false)
+        _binding = FragmentPharmacyDetailsBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -48,8 +48,8 @@ class PharmacyDetailsFragment : Fragment(R.layout.fragment_pharmacy_details) {
         }
     }
 
-    private fun goToMaps(){
-        binding.goToMapsImage.setOnClickListener {
+    private fun goToMaps() {
+        binding.goToMapsJmage.setOnClickListener {
             val lat = pharmacyModel.latitude
             val long = pharmacyModel.longitude
             val uri = Uri.parse("geo:$lat,$long?q=${pharmacyModel.EczaneAdi}")
@@ -57,7 +57,6 @@ class PharmacyDetailsFragment : Fragment(R.layout.fragment_pharmacy_details) {
             mapIntent.setPackage("com.google.android.apps.maps")
             ContextCompat.startActivity(requireContext(), mapIntent, null)
         }
-
     }
 
     private fun call() {
@@ -65,7 +64,6 @@ class PharmacyDetailsFragment : Fragment(R.layout.fragment_pharmacy_details) {
             val intent = Intent(Intent.ACTION_DIAL)
             intent.data = Uri.parse("tel:${pharmacyModel.Telefon}")
             startActivity(intent)
-
         }
     }
     override fun onDestroyView() {

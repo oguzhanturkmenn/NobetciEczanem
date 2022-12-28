@@ -16,7 +16,6 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:padding="@dimen/p5"
-            app:layout_constraintBottom_toTopOf="@id/rvEczane"
             app:layout_constraintTop_toTopOf="parent">
 
             <Spinner
@@ -41,10 +40,11 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvEczane"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="10dp"
             android:layoutAnimation="@anim/layout_animation"
-            android:layout_marginTop="@dimen/mt25"
-            android:layout_marginBottom="@dimen/mt50"
+            app:layout_constraintBottom_toTopOf="@+id/searchButton"
             app:layout_constraintTop_toBottomOf="@id/infoView" />
 
         <Button

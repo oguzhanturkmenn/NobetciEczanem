@@ -1,140 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFCDD2"
-    android:orientation="vertical">
+    android:background="#FFCDD2">
 
-    <LinearLayout
-        android:id="@+id/ll1"
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        >
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardView"
+        android:background="#FFCDD2">
+
+
+        <ImageView
+            android:id="@+id/aboutAppImg"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginTop="125dp"
-            app:cardCornerRadius="22dp"
-            app:cardElevation="4dp"
-            tools:layout_editor_absoluteY="168dp">
+            android:layout_height="350dp"
+            android:layout_marginTop="-175dp"
+            android:src="@drawable/pill"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
-            <TextView
-                android:id="@+id/aboutAppText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Uygulama Hakkında"
-                android:textColor="@color/red"
-                android:textSize="@dimen/text_medium"
-                android:textStyle="bold"
-                app:fontFamily="@font/aldrich" />
-
-        </androidx.cardview.widget.CardView>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/ll2"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/aboutAppText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/title_example"
+            android:paddingHorizontal="@dimen/_25ssp"
+            android:text="@string/uygulama_hakkinda"
+            android:textColor="@color/red"
+            android:textSize="@dimen/_25ssp"
+            android:textStyle="bold"
+            app:fontFamily="@font/aldrich"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/aboutAppImg" />
 
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardView2"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginTop="235dp"
-            app:cardCornerRadius="22dp"
-            app:cardElevation="4dp"
-            tools:layout_editor_absoluteY="275dp">
-
-            <TextView
-                android:id="@+id/emailText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-
-                android:drawablePadding="10dp"
-                android:paddingStart="15dp"
-                android:text="@string/email"
-                android:textColor="@color/black"
-                android:textSize="@dimen/text_small"
-                app:drawableLeftCompat="@drawable/ic_email" />
-
-        </androidx.cardview.widget.CardView>
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/ll3"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardView3"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginTop="325dp"
-            app:cardCornerRadius="22dp"
-            app:cardElevation="4dp"
-            tools:layout_editor_absoluteY="358dp">
-
-            <TextView
-                android:id="@+id/apiText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:drawablePadding="10dp"
-                android:paddingStart="15dp"
-                android:text="@string/api"
-                android:textColor="@color/black"
-                android:textSize="@dimen/text_more_small"
-                app:drawableLeftCompat="@drawable/ic_link" />
-
-        </androidx.cardview.widget.CardView>
+        <TextView
+            android:id="@+id/emailText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="65dp"
+            android:background="@drawable/title_example"
+            android:drawablePadding="10dp"
+            android:paddingStart="15dp"
+            android:paddingEnd="10dp"
+            android:text="@string/email"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15ssp"
+            app:drawableLeftCompat="@drawable/ic_email"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/aboutAppText"
+            app:paddingStart="15dp" />
 
 
-    </LinearLayout>
+        <TextView
+            android:id="@+id/apiText"
+            android:layout_width="@dimen/_295sdp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="65dp"
+            android:drawablePadding="10dp"
+            android:background="@drawable/title_example"
+            android:paddingStart="15dp"
+            android:text="@string/api"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12ssp"
+            app:drawableLeftCompat="@drawable/ic_link"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/emailText" />
 
 
-    <LinearLayout
-        android:id="@+id/ll4"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <androidx.cardview.widget.CardView
+        <TextView
+            android:id="@+id/açıklama_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="405dp"
-            app:cardCornerRadius="12dp"
-            app:cardElevation="4dp"
-            tools:layout_editor_absoluteY="442dp">
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="75dp"
+            android:background="@drawable/title_example"
+            android:paddingStart="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingEnd="10dp"
+            android:text="@string/app_açıklama"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/apiText" />
 
 
-            <TextView
-                android:id="@+id/açıklama_text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingStart="5dp"
-                android:text="@string/app_açıklama"
-                android:textColor="@color/black"
-                android:textSize="17sp" />
-
-        </androidx.cardview.widget.CardView>
-    </LinearLayout>
-
-
-    <ImageView
-        android:id="@+id/aboutAppImg"
-        android:layout_width="303dp"
-        android:layout_height="203dp"
-        android:layout_marginTop="-90dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/pill" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

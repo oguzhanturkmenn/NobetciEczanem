@@ -16,4 +16,5 @@
     <string name="email">oguzhn.1132@gmail.com</string>
     <string name="api">API: https://www.nosyapi.com/api/nobetci-eczane</string>
     <string name="app_açıklama">Nöbetçi eczanem uygulaması tamamen ücretsiz ve gönüllü olarak kullanıcılara hizmet vermektedir. Türkiyenin tüm şehirlerinde ve ilçelerindeki nöbetçi eczanelere erişebilir, yol tarifi isteyebilir ve kolaylıkla arama yapabilirsiniz. Uygulamadaki veriler her an güncel olarak sizlere yansıtılmaktadır. Uygulamamızı kullanıp bize destek olduğunuz için çok teşekkür ederiz.</string>
+    <string name="uygulama_hakkinda">Uygulama Hakkında</string>
 </resources>

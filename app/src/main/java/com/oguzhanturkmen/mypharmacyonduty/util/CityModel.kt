@@ -8,6 +8,3 @@ data class CityModel(
     val ilceleri:ArrayList<String>,
     val plaka:Int
     )
-{
-
-}
