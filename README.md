@@ -12,6 +12,7 @@
 - Retrofit 
 - Gson 
 - Lottie
+- Swipe Refresh Layout
 - Data Bingind
 - View Binding
 - Toastic
@@ -19,5 +20,10 @@
 - Animations
 - Internet controller
 
+## Screenshots
+
+| No Internet | Home | Details |
+|-------------------|-------------------|-------------------|
+| ![Screenshot 1](screenshots/nointernet.jpg) | ![Screenshot 2](screenshots/home.jpg) | ![Screenshot 3](screenshots/details.jpg) |
 
 
