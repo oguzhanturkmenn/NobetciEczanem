@@ -8,7 +8,6 @@
 - MVVM with Clean Architecture
 - LiveData
 - Navigation Component
-- Room Database
 - Retrofit 
 - Gson 
 - Lottie
